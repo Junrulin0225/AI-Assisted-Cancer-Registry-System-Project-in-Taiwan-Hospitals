@@ -1,25 +1,26 @@
 import pandas as pd
-df_Amber = pd.read_excel('C:/Users/candy850225/Desktop/Amber_Candy_score_compare.xlsx', sheet_name= 'Amber_uteri').round(2)
-df_Candy = pd.read_excel('C:/Users/candy850225/Desktop/Amber_Candy_score_compare.xlsx', sheet_name= 'Candy_uteri')
+df_collegue = pd.read_excel('Score Comparison.xlsx', sheet_name= "Collegue's uteri score").round(2)
+df_mine = pd.read_excel('Score Comparison.xlsx', sheet_name= "Jun-Ru's uteri score")
 
 
-match = df_Amber.loc[:, ['precision','recall','F-measure']] == df_Candy.loc[:, ['precision','recall','F-measure']]
+match = df_collegue.loc[:, ['precision','recall','F-measure']] == df_mine.loc[:, ['precision','recall','F-measure']]
 
 
-df_Amber = df_Amber.rename(columns={
-    'precision': 'precision_Amber',
-    'recall': 'recall_Amber',
-    'F-measure': 'F-measure_Amber'
+df_collegue = df_collegue.rename(columns={
+    'precision': 'precision_collegue',
+    'recall': 'recall_collegue',
+    'F-measure': 'F-measure_collegue'
 })
 
 
-df_Candy = df_Candy.rename (columns={
-    'precision': 'precision_Candy',
-    'recall': 'recall_Candy',
-    'F-measure': 'F-measure_Candy'
+df_mine = df_mine.rename (columns={
+    'precision': 'precision_mine',
+    'recall': 'recall_mine',
+    'F-measure': 'F-measure_mine'
 })
 
 
-merge = pd.merge(df_Amber, df_Candy , on =['code','column_name'], how = 'inner')
+merge = pd.merge(df_collegue, df_mine , on =['code','column_name'], how = 'inner')
 merge['match'] = match.all(1)
 print(merge)
+merge.to_excel('merge.xlsx')
