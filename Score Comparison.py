@@ -23,4 +23,4 @@ df_mine = df_mine.rename (columns={
 merge = pd.merge(df_collegue, df_mine , on =['code','column_name'], how = 'inner')
 merge['match'] = match.all(1)
 print(merge)
-merge.to_excel('merge.xlsx')
+merge.to_excel('score compared.xlsx')
