@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.metrics import classification_report  
 df_Predict = pd.read_excel('(Predict) Uteri Cancer.xlsx')
 df_TRUE = pd.read_excel('(True) Uteri Cancer.xlsx')
-# 把Dataframe中的NaN取代成0
+#Replace null value into 0
 Predict = df_Predict.fillna(0)
 TRUE = df_TRUE
 
