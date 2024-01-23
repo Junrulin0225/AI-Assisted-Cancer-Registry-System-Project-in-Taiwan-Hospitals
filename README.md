@@ -15,13 +15,13 @@ ex: We see that for Pathological Grade (Grade_P), many cases are grade 1, 2, 3, 
 
 - Step 2: (take uteri cancer for example) Calculate the AI score from
 
-True data  **(True) Uteri Cancer.xlsx**
-Predict data **(Predict) Uteri Cancer.xlsx**
-👉 **Score for Each Column.py** 👉 **Uteri Score.xlsx**   
+True data  **(True) Uteri Cancer.csv**
+Predict data **(Predict) Uteri Cancer.csv**
+👉 **Score for Each Column.py** 👉 **Uteri Score.csv**   
 
 - Step 3: Compare AI scores between colleagues
   
-**Score Comparison.xlsx**  👉 **Score Comparison.py**  👉 **merge compared.xlsx**
+**Score Comparison.csv**  👉 **Score Comparison.py**  👉 **merge compared.csv**
 
 
 
