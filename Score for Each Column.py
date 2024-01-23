@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.metrics import classification_report  
-df_Predict = pd.read_excel('(Predict) Uteri Cancer.xlsx')
-df_TRUE = pd.read_excel('(True) Uteri Cancer.xlsx')
+df_Predict = pd.read_csv('(Predict) Uteri Cancer.csv')
+df_TRUE = pd.read_csv('(True) Uteri Cancer.csv')
 #Replace null value into 0
 Predict = df_Predict.fillna(0)
 TRUE = df_TRUE
@@ -35,13 +35,10 @@ for column in column_name_list:
     dic['recall'].append(df.loc['weighted avg', 'recall'])
     dic['F-measure'].append(df.loc['weighted avg', 'f1-score'])
 
-    
-    # df.to_excel(f'uteri_cancer_score_{column}.xlsx', index=True, sheet_name='20230707')
-    # print('Congrats!uteri_cancer_score successfully exported to your location!')
 
 
 df_score = pd.DataFrame.from_dict(dic)
 df_score = df_score.set_index('column_name')
 print(df_score)
-df_score.to_excel('uteri_score.xlsx', index=True, sheet_name='20230707')
+df_score.to_csv('Uteri Score.csv', index=True, sheet_name='20230707')
 print('Congrats!uteri_score successfully exported to your location!')
