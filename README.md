@@ -8,7 +8,7 @@ In this project, we trained the AI-Assisted Cancer Registry System to fill up th
 #### Workflow
 - Step 1: Clean Data from
 
-**Answer for Cancer.csv** 👉 **CountValues for Each Columns (Data_Cleaning).ipynb** 👉
+**Answer for Cancer.csv** 👉 **CountValues for Each Columns (Data_Cleaning).ipynb** 👉 **Col Counts.csv**
 
 to see how many cases are correlated to each code of each column (e.g. feature). Turning the result into DataFrame makes it easier to read. 
 ex: We see that for Pathological Grade (Grade_P), many cases are grade 1, 2, 3, 9, then we check the pathological report to see what keywords or contents determine grade 2 or grade 9.
@@ -21,7 +21,7 @@ Predict data **(Predict) Uteri Cancer.csv**
 
 - Step 3: Compare AI scores between colleagues
   
-**Score Comparison.csv**  👉 **Score Comparison.py**  👉 **merge compared.csv**
+**Score Comparison.csv**  👉 **Score Comparison.py**  👉 **Merge Compared.csv**
 
 
 
