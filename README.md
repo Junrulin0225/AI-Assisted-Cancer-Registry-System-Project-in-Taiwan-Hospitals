@@ -3,7 +3,7 @@ Welcome to the **AI-Assisted Cancer Registry System Project in Taiwan's Hospital
 
 During my previous job working as a medical report analyst at IASL, Taiwan, I helped my team analyze our medical reports more efficiently with the help of Python and Excel.
 
-In this project, we trained the AI-Assisted Cancer Registry System to fill up the correct codes for each feature (e.g. Primary Site, Histology, Pathological Grade, pT,...) so cancer registers don't have to spend a lot of time filling up the columns manually. 
+In this project, we trained the AI-Assisted Cancer Registry System to fill up the correct medical codes for each feature (e.g. Primary Site, Histology, Pathological Grade, pT, ICD-10, ICD-O-3...) so cancer registers don't have to spend a lot of time filling up the columns manually. 
 
 #### Workflow
 - Step 1: Clean Data from
